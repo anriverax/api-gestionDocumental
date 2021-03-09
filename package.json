@@ -1,0 +1,34 @@
+{
+  "name": "api-gestiondocumental",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist",
+    "restart": "rimraf dist && npm run start",
+    "dev": "nodemon --exec npm run restart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anriverax/api-gestionDocumental.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anriverax/api-gestionDocumental/issues"
+  },
+  "homepage": "https://github.com/anriverax/api-gestionDocumental#readme",
+  "dependencies": {
+    "mssql": "^6.3.1",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
+    "rimraf": "^3.0.2"
+  }
+}
