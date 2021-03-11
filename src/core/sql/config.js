@@ -2,6 +2,10 @@
  * Function used to configure the conection of the Data Base
  * @returns
  */
+import dotenv from "dotenv";
+
+dotenv.config({ path: ".env" });
+
 const Configuration = () => ({
 	user: process.env.USR_SQL_REGACADEMICO,
 	password: process.env.PWD_SQL_REGACADEMICO,
