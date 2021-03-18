@@ -2,25 +2,20 @@ import sql from "mssql";
 class CrudSql {
 	constructor(config) {
 		this.config = config;
+		this._response = "";
 	}
 
+	get response() {
+		return this._response;
+	}
 	async read(query) {
-		let result;
+		console.log(query);
 		try {
 			await sql.connect(this.config);
-			result = await sql.query(query);
-			console.log("----- success -----");
-			console.log(result);
+			this._response = await sql.query(query.toString());
 		} catch (error) {
-			console.log("----- error -----");
-			console.log(error);
-			result = error;
+			this._response = error;
 		}
-		return result;
-	}
-
-	create() {
-		console.log("HOLA");
 	}
 }
 export default CrudSql;

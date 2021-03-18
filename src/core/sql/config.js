@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: ".env" });
 
-const Configuration = () => ({
+const configuration = () => ({
 	user: process.env.USR_SQL_REGACADEMICO,
 	password: process.env.PWD_SQL_REGACADEMICO,
 	server: process.env.IP_SQL_REGACADEMICO,
@@ -17,4 +17,4 @@ const Configuration = () => ({
 	},
 });
 
-export default Configuration;
+export default configuration;
