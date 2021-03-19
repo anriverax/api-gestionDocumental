@@ -3,6 +3,6 @@ import DocumentsController from "../app/controllers/documents.controller";
 
 const router = express.Router();
 
-router.get("/read", DocumentsController.read);
+router.post("/read", DocumentsController.read);
 
 export default router;
