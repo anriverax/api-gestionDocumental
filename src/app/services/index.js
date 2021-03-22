@@ -10,7 +10,7 @@ const removeExtension = (arg) => {
 	let arr = [];
 	arg.forEach((element) => {
 		elemetPart = element.split(".");
-		arr.push(elemetPart[0]);
+		arr.push(elemetPart[0].replace(/\s+/g, ""));
 	});
 
 	return arr;

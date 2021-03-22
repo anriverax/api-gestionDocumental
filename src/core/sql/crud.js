@@ -9,6 +9,7 @@ class CrudSql {
 		return this._response;
 	}
 	async read(query) {
+
 		try {
 			await sql.connect(this.config);
 			this._response = await sql.query(query.toString());
